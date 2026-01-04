@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DocReview UI
 
-## Getting Started
+業務メールや文章を対象に、  
+**問題点・改善案・理由**を整理して可視化する文章レビューUIです。
 
-First, run the development server:
+「この文章で本当に伝わるのか？」
+「どこが曖昧なのか？」
+「なぜそう直すべきなのか？」
+
+そういった悩みを、UI上で一目で確認できることを目的に作りました。
+
+▶ Demo  
+https://docreview-ui.vercel.app/
+
+---
+
+## Features
+
+- 業務文章のレビュー
+  - 問題点の指摘
+  - 改善案（自然な業務文）
+  - 改善理由の説明
+- 日本語 / 英語対応
+- シンプルなUIで即レビュー可能
+- ブラウザだけで利用可能（インストール不要）
+
+---
+
+## Use cases
+
+- 業務メールの送信前チェック
+- 社内外向け文章の推敲
+- 曖昧な表現・伝わりにくい箇所の洗い出し
+- 日本語 / 英語のビジネス文レビュー
+
+---
+
+## Tech Stack
+
+- Next.js (App Router)
+- TypeScript
+- OpenAI API (Responses API)
+- Tailwind CSS
+- Vercel
+
+---
+
+## How it works
+
+1. レビューしたい文章を入力
+2. 言語を選択（日本語 / 英語）
+3. レビュー実行
+4. 以下をタブ形式で表示
+   - Issues（問題点）
+   - Improved Draft（改善案）
+   - Reasons（理由）
+
+---
+
+## Local Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone https://github.com/uthuyomi/docreview-ui.git
+cd docreview-ui
+npm install
